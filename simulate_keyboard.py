@@ -12,8 +12,10 @@ def type(path=None, delay=None):
     
     # manually enter your code here or provide a path
     code = """
-            Enter the code to be autotyped 
-            here or provide a path to the file 
+class Complex:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
     """
     if path:
         with open(path, 'r') as file:
@@ -21,7 +23,10 @@ def type(path=None, delay=None):
             print(code)
         
     keyboard = Controller()
-    keyboard.type(code)
+    for line in code.split('\n'):
+        keyboard.type(line)
+        keyboard.tap(Key.enter)
+        keyboard.tap(Key.home)
     
 if __name__ == '__main__':
     parser = ArgumentParser(description='Autotype the specified file')
