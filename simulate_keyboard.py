@@ -20,7 +20,6 @@ class Complex:
     if path:
         with open(path, 'r') as file:
             code = file.read()
-            print(code)
         
     keyboard = Controller()
     for line in code.split('\n'):
