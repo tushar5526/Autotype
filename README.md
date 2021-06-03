@@ -34,5 +34,4 @@ Make sure to use triple quotes as it will preserve the code format.
 - Run the script `python3 simulate_keyboard.py`
 - The script will start typing after 3s (you can change the wait time or delay)
 - After running the script click on the window wherever you want to auto-type.
-  
-**Note**: You may have to adjust indents manually if you autotype a python file. 
+ 
