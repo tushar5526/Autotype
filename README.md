@@ -1,6 +1,8 @@
 # Autotype
 A quick and small python script that helps you autotype on websites that have copy paste disabled like Moodle, HackerEarth contests etc as it is difficult to efficiently debug your code on an online compiler.
 
+**Works for both windows and linux**
+
 <img src="./demo.gif?raw=true">
 
 # Pre-requisites
