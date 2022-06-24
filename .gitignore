@@ -139,4 +139,4 @@ dmypy.json
 .pyre/
 
 # Test is under development
-/test
+*out.py
