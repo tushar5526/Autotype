@@ -17,13 +17,9 @@ A quick and small python script that helps you autotype on websites that have co
 Install python3.x, pip 
 
 # Install the dependencies
-for Linux and Windows
 
 `pip install -r requirements.txt`
 
-for Macos
-
-`pip install -r optional-requirements.txt`
 ### Run it as CLI app
 
 Provide the path of the file to be autotyped and the delay time through teminal/shell.
