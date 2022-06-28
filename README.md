@@ -44,4 +44,17 @@ Make sure to use triple quotes as it will preserve the code format.
 - Run the script `python3 Simulator/simulate_keyboard.py`
 - The script will start typing after 3s (you can change the wait time or delay)
 - After running the script click on the window wherever you want to auto-type.
+<hr>
+
+## 💪 Thanks to all Contributors
+
+Thanks a lot for spending your time helping AutoType grow. Thanks a lot! Keep rocking 🍻
+
+[![Contributors](https://contrib.rocks/image?repo=tushar5526/Autotype)](https://github.com/tushar5526/Autotype/graphs/contributors)
+
+## 🙏 Support
+
+This project needs a ⭐️ from you. Don't forget to leave a star ⭐️
+
+
 
