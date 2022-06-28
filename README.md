@@ -15,16 +15,22 @@ Install python3.x, pip
 
 Provide the path of the file to be autotyped and the delay time through teminal/shell.
 
-`python3 simulate_keyboard --path filePath --time delay_before_typing`
+`python3 command_line_script --path filePath --time delay_before_typing`
 
-`python3 simulate_keyboard -p filePath -t delay_before_typing`
+`python3 command_line_script -p filePath -t delay_before_typing`
+
+
+### Run the GUI if you are not familiar with CLI apps.
+- Run the script `python3 GUI_script.py`
+<img src="demo_image/demo_gui.png">
+
 
 
 ### Run it as follows if you are not familiar with CLI apps.
-Put the text inside `code` in `simulate_keyboard.py` as follows
+Put the text inside `code` in `Simulator/simulate_keyboard.py` as follows
 
 ```
-Line 14
+Line 13
 code = """
     #include<bits/stdc++.h>
     {
@@ -35,7 +41,7 @@ code = """
 """
 Make sure to use triple quotes as it will preserve the code format.
 ```
-- Run the script `python3 simulate_keyboard.py`
+- Run the script `python3 Simulator/simulate_keyboard.py`
 - The script will start typing after 3s (you can change the wait time or delay)
 - After running the script click on the window wherever you want to auto-type.
- 
+
