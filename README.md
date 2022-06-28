@@ -1,5 +1,13 @@
-# Autotype
+# Autotype 🖊
+<hr>
 A quick and small python script that helps you autotype on websites that have copy paste disabled like Moodle, HackerEarth contests etc as it is difficult to efficiently debug your code on an online compiler.
+
+[![GitHub issues](https://img.shields.io/github/issues/tushar5526/Autotype)](https://github.com/tushar5526/Autotype/issues)
+[![GitHub forks](https://img.shields.io/github/forks/tushar5526/Autotype)](https://github.com/tushar5526/Autotype/network)
+[![GitHub stars](https://img.shields.io/github/stars/tushar5526/Autotype)](https://github.com/tushar5526/Autotype/stargazers)
+[![GitHub license](https://img.shields.io/github/license/tushar5526/Autotype)](https://github.com/tushar5526/Autotype/blob/main/LICENSE)
+[![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) ![contributions welcome](https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=0059b3&style=flat-square) ![GitHub contributors](https://img.shields.io/github/contributors-anon/tushar5526/Autotype) 
+<br>
 
 **Works for both windows and linux**
 
@@ -55,6 +63,8 @@ Thanks a lot for spending your time helping AutoType grow. Thanks a lot! Keep ro
 ## 🙏 Support
 
 This project needs a ⭐️ from you. Don't forget to leave a star ⭐️
+
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)  [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 
 
 
