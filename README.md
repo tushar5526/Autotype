@@ -31,7 +31,7 @@ Provide the path of the file to be autotyped and the delay time through teminal/
 
 ### Run the GUI if you are not familiar with CLI apps.
 - Run the script `python3 GUI_script.py`
-<img src="demo_image/demo_gui.png">
+<img src="demo_image/demo_script_gui.png">
 
 
 
