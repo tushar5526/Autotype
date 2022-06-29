@@ -23,5 +23,7 @@ class Complex:
     keyboard = Controller()
     for line in code.split('\n'):
         keyboard.type(line)
+        # It was observed that a small sleep in between each lines, makes Autotype perform better
+        sleep(0.1)
         keyboard.tap(Key.enter)
         keyboard.tap(Key.home)
