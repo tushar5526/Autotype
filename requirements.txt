@@ -1,6 +1,6 @@
 pynput==1.7.3
 python-xlib==0.30
 six==1.16.0
-pyobjc==7.x; sys_platform=='darwin'
+pyobjc==7.1; sys_platform=='darwin'
 tk==0.1.0
 pillow==9.1.1
