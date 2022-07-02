@@ -24,9 +24,7 @@ Install python3.x, pip
 
 Provide the path of the file to be autotyped and the delay time through teminal/shell.
 
-`python3 command_line_script --path filePath --time delay_before_typing`
-
-`python3 command_line_script -p filePath -t delay_before_typing`
+`python3 command_line_script --path filePath --delay delay_before_typing`
 
 
 ### Run the GUI if you are not familiar with CLI apps.
