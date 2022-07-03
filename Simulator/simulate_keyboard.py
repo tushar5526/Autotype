@@ -2,13 +2,14 @@ from pynput.keyboard import Key, Controller
 from time import sleep
 
 
-def Type(path=None, delay=None):
+def Type(path: str = None, delay: int = None):
+    # If the Argument is negative
+    delay = abs(delay)
     if not delay:
         delay = 3
 
     # wait for few seconds before typing
     sleep(delay)
-
     # manually enter your code here or provide a path
     code = """
 class Complex:

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import os
 import typer
 from typing import Optional
@@ -38,7 +39,7 @@ def autotype_cli(
                 total += 1
         Type(path, delay)
         successfull_file_path = typer.style(f"{path} File", fg=typer.colors.BRIGHT_GREEN)
-        time_taken = typer.style(f"is written in {delay} seconds", fg=typer.colors.BRIGHT_WHITE)
+        time_taken = typer.style(f"is written in {abs(delay)} seconds", fg=typer.colors.BRIGHT_WHITE)
         typer.echo(f"{successfull_file_path + ' ' + time_taken}")
 
 
