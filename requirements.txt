@@ -5,3 +5,5 @@ pyobjc==7.1; sys_platform=='darwin'
 tk==0.1.0
 pillow==9.1.1
 typer==0.4.2
+
+
