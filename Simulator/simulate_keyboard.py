@@ -4,9 +4,12 @@ from time import sleep
 
 def Type(path: str = None, delay: int = None):
     # If the Argument is negative
-    delay = abs(delay)
     if not delay:
         delay = 3
+
+    if delay < 0:
+        print("Hmmmmmmmmm 😱 Interesting Time is negative 🥲")
+        delay = abs(delay)
 
     # wait for few seconds before typing
     sleep(delay)
