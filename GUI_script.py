@@ -7,7 +7,7 @@ if sys.version_info[0] == 3:
 else:
     import Tkinter as tk
     from TKinter import filedialog
-from Simulator.simulate_keyboard import Type
+from Simulator import Type
 from PIL import ImageTk, Image
 
 # GUI using Tkinter
