@@ -2,9 +2,8 @@
 import os
 import typer
 from typing import Optional
-from Simulator.simulate_keyboard import Type
+from Simulator import Type
 import time
-
 
 def autotype_cli(
         path: Optional[str] = typer.Option(default="",

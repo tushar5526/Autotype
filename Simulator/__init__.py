@@ -1,1 +1,1 @@
-from command_line_script import *
+from .simulate_keyboard import Type
