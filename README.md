@@ -1,5 +1,5 @@
 # Autotype 🖊
-<hr>
+
 A quick and small python script that helps you autotype on websites that have copy paste disabled like Moodle, HackerEarth contests etc as it is difficult to efficiently debug your code on an online compiler.
 
 [![GitHub issues](https://img.shields.io/github/issues/tushar5526/Autotype)](https://github.com/tushar5526/Autotype/issues)
