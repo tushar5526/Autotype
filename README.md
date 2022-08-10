@@ -26,6 +26,32 @@ Provide the path of the file to be autotyped and the delay time through teminal/
 
 `python3 command_line_script --path filePath --delay delay_before_typing`
 
+### Run it Global Commandline Executable
+
+If you are a Linux or a Macos user just all AutoType to Your .zshrc or .bashrc file
+
+```console
+~$ chmod +x Autotype
+```
+
+```console
+~$ vim .zshrc # For zshrc default shell
+```
+
+```console
+~$ vim .bashrc # For zshrc default shell
+```
+
+Add Autotype to your PATH in your .zshrc or .bashrc file 
+```bash
+export PATH="$PATH:path of autotype"
+```
+
+Restart the terminal
+```console
+~$ Autotype --help
+```
+
 
 ### Run the GUI if you are not familiar with CLI apps.
 - Run the script `python3 GUI_script.py`
@@ -64,6 +90,7 @@ Thanks a lot for spending your time helping AutoType grow. Thanks a lot! Keep ro
 This project needs a ⭐️ from you. Don't forget to leave a star ⭐️
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)  [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+
 
 
 
