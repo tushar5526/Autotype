@@ -44,7 +44,7 @@ If you are a Linux or a Macos user just all AutoType to Your .zshrc or .bashrc f
 
 Add Autotype to your PATH in your .zshrc or .bashrc file 
 ```bash
-export PATH="$PATH:path of autotype/bin"
+export PATH="$PATH:path of autotype"
 ```
 
 Restart the terminal
