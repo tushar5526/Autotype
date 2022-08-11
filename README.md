@@ -28,7 +28,7 @@ Provide the path of the file to be autotyped and the delay time through teminal/
 
 ### Run it Global Commandline Executable
 
-If you are a Linux or a Macos user just all AutoType to Your .zshrc or .bashrc file
+If you are a Linux or a Macos user just add AutoType to Your .zshrc or .bashrc file
 
 ```console
 ~$ chmod +x Autotype
