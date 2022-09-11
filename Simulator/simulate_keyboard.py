@@ -21,11 +21,11 @@ class Complex:
         self.y = y
     """
     if path:
-        with open(path, 'r') as file:
+        with open(path, "r") as file:
             code = file.read()
 
     keyboard = Controller()
-    for line in code.split('\n'):
+    for line in code.split("\n"):
         keyboard.type(line)
         # It was observed that a small sleep in between each lines, makes Autotype perform better
         sleep(0.1)
