@@ -2,6 +2,7 @@
 
 A quick and small python script that helps you autotype on websites that have copy paste disabled like Moodle, HackerEarth contests etc as it is difficult to efficiently debug your code on an online compiler.
 
+[![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/codingid6)
 [![GitHub issues](https://img.shields.io/github/issues/tushar5526/Autotype)](https://github.com/tushar5526/Autotype/issues)
 [![GitHub forks](https://img.shields.io/github/forks/tushar5526/Autotype)](https://github.com/tushar5526/Autotype/network)
 [![GitHub stars](https://img.shields.io/github/stars/tushar5526/Autotype)](https://github.com/tushar5526/Autotype/stargazers)
