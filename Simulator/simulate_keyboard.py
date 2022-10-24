@@ -2,7 +2,7 @@ from pynput.keyboard import Key, Controller
 from time import sleep
 
 
-def Type(path: str = None, delay: int = None):
+def Type(path: str = None, delay: int = None , code: str = None):
     # If the Argument is negative
     if not delay:
         delay = 3
@@ -14,15 +14,16 @@ def Type(path: str = None, delay: int = None):
     # wait for few seconds before typing
     sleep(delay)
     # manually enter your code here or provide a path
-    code = """
-class Complex:
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
-    """
     if path:
         with open(path, "r") as file:
             code = file.read()
+    else:
+        code = """
+    class Complex:
+        def __init__(self, x, y):
+            self.x = x
+            self.y = y
+        """
 
     keyboard = Controller()
     for line in code.split("\n"):
