@@ -17,6 +17,8 @@ def Type(path: str = None, delay: int = None , code: str = None):
     if path:
         with open(path, "r") as file:
             code = file.read()
+    elif code:
+        pass
     else:
         code = """
     class Complex:
