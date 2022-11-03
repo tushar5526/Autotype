@@ -2,7 +2,7 @@ from pynput.keyboard import Key, Controller
 from time import sleep
 
 
-def Type(path: str = None, delay: int = None , code: str = None):
+def Type(path: str = None, delay: int = None, code: str = None):
     # If the Argument is negative
     if not delay:
         delay = 3
