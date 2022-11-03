@@ -1,88 +1,112 @@
-# Imports
-import sys
 
-if sys.version_info[0] == 3:
-    import tkinter as tk
-    from tkinter import filedialog
-else:
-    import Tkinter as tk
-    from TKinter import filedialog
+import tkinter as tk
 from Simulator import Type
-from PIL import ImageTk, Image
+import customtkinter
+from tkinter import filedialog
+import tkinter
 
-# GUI using Tkinter
-
-# Root Widget
-root_widget = tk.Tk()
-root_widget.title("KeyBoard Simulator")
-
-# Width and Height
-root_widget.geometry("780x480")
-
-# Image
-frame = tk.Frame(root_widget, width=600, height=400)
-frame.pack()
-frame.place(anchor="center", relx=0.5, rely=0.5)
-body_image = ImageTk.PhotoImage(Image.open("gui_assets/type.jpg"))
-label_for_body_image = tk.Label(frame, image=body_image)
-label_for_body_image.pack()
-
-# Labeling the window title
-root_window_title = tk.Label(
-    root_widget, text="AutoType 🖊", fg="#8FBDD3", font=("", 62)
-)
-root_window_title.pack()
-
-# Input Box for Time Delay
-entry_for_time_delay = tk.Entry(root_widget, borderwidth=5)
-entry_for_time_delay.pack()
-entry_for_time_delay.insert(0, 3)
+customtkinter.set_appearance_mode("Dark")  # Modes: "System" (standard), "Dark", "Light"
 
 
-# Logic
-# Function for Addition of Time Delay
-def add_time_delay():
-    mylable_time = tk.Label(
-        root_widget, text=f"Time Delay of {entry_for_time_delay.get()} seconds added"
-    )
-    mylable_time.pack()
+class App(customtkinter.CTk):
 
+    WIDTH = 780
+    HEIGHT = 520
 
-# Function for Opening File
-def open_file():
-    filePath = filedialog.askopenfile()
-    return filePath.name
+    def __init__(self):
+        super().__init__()
+        self.resizable(0,0 )
+        self.title("Autotype")
+        self.geometry(f"{App.WIDTH}x{App.HEIGHT}")
 
+        self.protocol("WM_DELETE_WINDOW", self.on_closing)  
 
-# Function for Writing File through keyboard
-def file_writer():
-    Type(path=open_file(), delay=int(entry_for_time_delay.get()))
-    done_task = tk.Label(text="Done Writing Script")
-    done_task.pack()
+        # ============ created two frames ============
 
+        # configured grid layout (2x1)
+        self.grid_columnconfigure(1, weight=1)
+        self.grid_rowconfigure(0, weight=1)
 
-# Button widget instance
-button_for_add_time_delay = tk.Button(
-    root_widget,
-    text="Add time Delay in Seconds",
-    activebackground="#345",
-    activeforeground="white",
-    padx=5,
-    pady=5,
-    command=add_time_delay,
-)
-button_for_add_time_delay.pack()
+        self.frame_left = customtkinter.CTkFrame(master=self,
+                                                 width=180,
+                                                 corner_radius=0)
+        self.frame_left.grid(row=0, column=0, sticky="nswe")
 
-# Button widget instance
-button_for_writing_file = tk.Button(
-    root_widget,
-    text="Write File",
-    activebackground="#345",
-    activeforeground="white",
-    padx=5,
-    pady=5,
-    command=file_writer,
-)
-button_for_writing_file.pack()
+        self.frame_right = customtkinter.CTkFrame(master=self)
+        self.frame_right.grid(row=0, column=1, sticky="nswe", padx=20, pady=20)
 
-root_widget.mainloop()
+        # ============ frame_left ============
+
+        # configure grid layout (1x11)
+        self.frame_left.grid_rowconfigure(0, minsize=10)   # empty row with minsize as spacing
+        self.frame_left.grid_rowconfigure(5, weight=1)  # empty row as spacing
+        self.frame_left.grid_rowconfigure(8, minsize=20)    # empty row with minsize as spacing
+        self.frame_left.grid_rowconfigure(11, minsize=10)  # empty row with minsize as spacing
+
+        self.delay = customtkinter.CTkEntry(master=self.frame_left,
+                                            width=140,
+                                            placeholder_text="Enter time delay")
+        self.delay.grid(row=1, column=0, pady=20, padx=20)
+
+        self.button_2 = customtkinter.CTkButton(master=self.frame_left,
+                                                text="Start Typing",
+                                                fg_color=("gray75", "gray30"),  # <- custom tuple-color
+                                                command=self.start_typing,
+                                                hover = True)
+        self.button_2.grid(row=3, column=0, pady=10, padx=20)
+
+        self.label = customtkinter.CTkLabel(master=self.frame_left, text="")
+        self.label.place(relx=0.5, rely=0.3, anchor=tkinter.CENTER)
+
+        self.switch_1 = customtkinter.CTkSwitch(master=self.frame_left,
+                                                text="Dark Mode",
+                                                command=self.change_mode)
+        self.switch_1.grid(row=10, column=0, pady=10, padx=20, sticky="w")
+
+        # ============ frame_right ============
+
+        self.code = customtkinter.CTkTextbox(master=self.frame_right,
+                                            width=520,height = 400)
+        self.code.grid(row=8, column=0, columnspan=2, pady=20, padx=20, sticky="we")
+
+        self.label_2 = customtkinter.CTkLabel(master=self.frame_right,
+                                              text="Enter Your Code",
+                                              text_font=("Roboto Medium", -16))  # font name and size in px
+        self.label_2.grid(row=8, column=0, columnspan=2, pady=20, padx=20, sticky="we")        
+        self.label_2.place(relx=0.38, rely=0.92)
+
+    def open_file(self):
+        filePath = filedialog.askopenfile()
+        return filePath.name
+
+    def start_typing(self):
+        delay = self.delay.get()
+        code = self.code.textbox.get('1.0', tk.END)
+        if str(code).isspace() and delay != "": # when code is not provided
+            Type(path=self.open_file(), delay= int(delay) , code = None)
+            self.label.configure(text="Done Writing Script")
+        elif str(code).isspace() and delay == "":
+            Type(path=self.open_file(), delay= int(delay) , code = None)
+            self.label.configure(text="Done Writing Script")
+        elif not str(code).isspace() and delay != "": # when code is provided
+            Type(path=None , delay = int(delay) , code = code)
+            self.label.configure(text="Done Writing Script")
+        else:
+            Type(path=None , delay = int(delay) , code = code)
+            self.label.configure(text="Done Writing Script")
+
+    def change_mode(self):
+        if self.switch_1.get() == 1:
+            customtkinter.set_appearance_mode("dark")
+        else:
+            customtkinter.set_appearance_mode("light")
+
+    def on_closing(self, event=0):
+        self.destroy()
+
+    def start(self):
+        self.mainloop()
+
+if __name__ == "__main__":
+    app = App()
+    app.start()
