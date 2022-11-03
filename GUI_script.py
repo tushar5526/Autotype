@@ -1,4 +1,3 @@
-
 import tkinter as tk
 from Simulator import Type
 import customtkinter
@@ -15,11 +14,11 @@ class App(customtkinter.CTk):
 
     def __init__(self):
         super().__init__()
-        self.resizable(0,0 )
+        self.resizable(0, 0)
         self.title("Autotype")
         self.geometry(f"{App.WIDTH}x{App.HEIGHT}")
 
-        self.protocol("WM_DELETE_WINDOW", self.on_closing)  
+        self.protocol("WM_DELETE_WINDOW", self.on_closing)
 
         # ============ created two frames ============
 
@@ -27,9 +26,9 @@ class App(customtkinter.CTk):
         self.grid_columnconfigure(1, weight=1)
         self.grid_rowconfigure(0, weight=1)
 
-        self.frame_left = customtkinter.CTkFrame(master=self,
-                                                 width=180,
-                                                 corner_radius=0)
+        self.frame_left = customtkinter.CTkFrame(
+            master=self, width=180, corner_radius=0
+        )
         self.frame_left.grid(row=0, column=0, sticky="nswe")
 
         self.frame_right = customtkinter.CTkFrame(master=self)
@@ -38,41 +37,52 @@ class App(customtkinter.CTk):
         # ============ frame_left ============
 
         # configure grid layout (1x11)
-        self.frame_left.grid_rowconfigure(0, minsize=10)   # empty row with minsize as spacing
+        self.frame_left.grid_rowconfigure(
+            0, minsize=10
+        )  # empty row with minsize as spacing
         self.frame_left.grid_rowconfigure(5, weight=1)  # empty row as spacing
-        self.frame_left.grid_rowconfigure(8, minsize=20)    # empty row with minsize as spacing
-        self.frame_left.grid_rowconfigure(11, minsize=10)  # empty row with minsize as spacing
+        self.frame_left.grid_rowconfigure(
+            8, minsize=20
+        )  # empty row with minsize as spacing
+        self.frame_left.grid_rowconfigure(
+            11, minsize=10
+        )  # empty row with minsize as spacing
 
-        self.delay = customtkinter.CTkEntry(master=self.frame_left,
-                                            width=140,
-                                            placeholder_text="Enter time delay")
+        self.delay = customtkinter.CTkEntry(
+            master=self.frame_left, width=140, placeholder_text="Enter time delay"
+        )
         self.delay.grid(row=1, column=0, pady=20, padx=20)
 
-        self.button_2 = customtkinter.CTkButton(master=self.frame_left,
-                                                text="Start Typing",
-                                                fg_color=("gray75", "gray30"),  # <- custom tuple-color
-                                                command=self.start_typing,
-                                                hover = True)
+        self.button_2 = customtkinter.CTkButton(
+            master=self.frame_left,
+            text="Start Typing",
+            fg_color=("gray75", "gray30"),  # <- custom tuple-color
+            command=self.start_typing,
+            hover=True,
+        )
         self.button_2.grid(row=3, column=0, pady=10, padx=20)
 
         self.label = customtkinter.CTkLabel(master=self.frame_left, text="")
         self.label.place(relx=0.5, rely=0.3, anchor=tkinter.CENTER)
 
-        self.switch_1 = customtkinter.CTkSwitch(master=self.frame_left,
-                                                text="Dark Mode",
-                                                command=self.change_mode)
+        self.switch_1 = customtkinter.CTkSwitch(
+            master=self.frame_left, text="Dark Mode", command=self.change_mode
+        )
         self.switch_1.grid(row=10, column=0, pady=10, padx=20, sticky="w")
 
         # ============ frame_right ============
 
-        self.code = customtkinter.CTkTextbox(master=self.frame_right,
-                                            width=520,height = 400)
+        self.code = customtkinter.CTkTextbox(
+            master=self.frame_right, width=520, height=400
+        )
         self.code.grid(row=8, column=0, columnspan=2, pady=20, padx=20, sticky="we")
 
-        self.label_2 = customtkinter.CTkLabel(master=self.frame_right,
-                                              text="Enter Your Code",
-                                              text_font=("Roboto Medium", -16))  # font name and size in px
-        self.label_2.grid(row=8, column=0, columnspan=2, pady=20, padx=20, sticky="we")        
+        self.label_2 = customtkinter.CTkLabel(
+            master=self.frame_right,
+            text="Enter Your Code",
+            text_font=("Roboto Medium", -16),
+        )  # font name and size in px
+        self.label_2.grid(row=8, column=0, columnspan=2, pady=20, padx=20, sticky="we")
         self.label_2.place(relx=0.38, rely=0.92)
 
     def open_file(self):
@@ -81,18 +91,18 @@ class App(customtkinter.CTk):
 
     def start_typing(self):
         delay = self.delay.get()
-        code = self.code.textbox.get('1.0', tk.END)
-        if str(code).isspace() and delay != "": # when code is not provided
-            Type(path=self.open_file(), delay= int(delay) , code = None)
+        code = self.code.textbox.get("1.0", tk.END)
+        if str(code).isspace() and delay != "":  # when code is not provided
+            Type(path=self.open_file(), delay=int(delay), code=None)
             self.label.configure(text="Done Writing Script")
         elif str(code).isspace() and delay == "":
-            Type(path=self.open_file(), delay= int(delay) , code = None)
+            Type(path=self.open_file(), delay=int(delay), code=None)
             self.label.configure(text="Done Writing Script")
-        elif not str(code).isspace() and delay != "": # when code is provided
-            Type(path=None , delay = int(delay) , code = code)
+        elif not str(code).isspace() and delay != "":  # when code is provided
+            Type(path=None, delay=int(delay), code=code)
             self.label.configure(text="Done Writing Script")
         else:
-            Type(path=None , delay = int(delay) , code = code)
+            Type(path=None, delay=int(delay), code=code)
             self.label.configure(text="Done Writing Script")
 
     def change_mode(self):
@@ -106,6 +116,7 @@ class App(customtkinter.CTk):
 
     def start(self):
         self.mainloop()
+
 
 if __name__ == "__main__":
     app = App()
