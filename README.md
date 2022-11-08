@@ -34,7 +34,14 @@ Provide the path of the file to be autotyped and the delay time through teminal/
 - Run the script `python3 GUI_script.py`
 <img src="demo_image/demo_script_gui.png">
 
+- You can simply type your code in the textbox , enter the time delay and click the `Start Typing` button.The script will then type your code for you.
+![](https://github.com/RyanWalker277/Autotype/blob/main/demo_image/type_code.gif)
 
+- If your code is in a file , then leave the textbox blank , enter the time delay and click `Start Typing` button.A file exploror prompt will open asking you to select the file.Simply select your file and Done! Autotype will type your code for you.
+![](https://github.com/RyanWalker277/Autotype/blob/main/demo_image/open_file.gif)
+
+- There are two themes in the GUI Script: Dark and Light. By clicking the toggle in the bottom left corner of the window, you can switch between the two.
+![](https://github.com/RyanWalker277/Autotype/blob/main/demo_image/themes.gif)
 
 ### Run it as follows if you are not familiar with CLI apps.
 Put the text inside `code` in `Simulator/simulate_keyboard.py` as follows
