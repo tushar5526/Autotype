@@ -35,7 +35,7 @@ class CLI:
             --delay: time delay before typing.
 
             return: Prints the File Given.
-            """
+        """
         if path and not os.path.isfile(path):
             file_path = typer.style(
                 f"{path}",
@@ -69,5 +69,6 @@ class CLI:
             typer.echo(f"{successfull_file_path + ' ' + time_taken}")
 
 
-if __name__ == "__main__":
-    typer.run(CLI().cli_options)
+# if __name__ == "__main__":
+#     typer.run(CLI().cli_options)
+

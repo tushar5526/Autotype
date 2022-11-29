@@ -116,8 +116,3 @@ class App(customtkinter.CTk):
 
     def start(self):
         self.mainloop()
-
-
-if __name__ == "__main__":
-    app = App()
-    app.start()
