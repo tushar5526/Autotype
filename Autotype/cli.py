@@ -69,6 +69,3 @@ class CLI:
             typer.echo(f"{successfull_file_path + ' ' + time_taken}")
 
 
-# if __name__ == "__main__":
-#     typer.run(CLI().cli_options)
-

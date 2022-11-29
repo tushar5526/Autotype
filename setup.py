@@ -39,6 +39,7 @@ setup(
         "typer==0.4.2",
         "typing_extensions==4.4.0",
         "zipp==3.10.0",
+        "pyobjc==7.3; sys_platform=='darwin'"
     ],
     entry_points={
         "console_scripts": [
