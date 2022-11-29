@@ -1,5 +1,5 @@
 import tkinter as tk
-from core import Autotype
+from .core import Autotype
 import customtkinter
 from tkinter import filedialog
 import tkinter

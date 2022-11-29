@@ -1,5 +1,5 @@
-from core import Autotype
-from gui import App
+from .core import Autotype
+from .gui import App
 from cli import CLI
 import typer
 from typing import Optional

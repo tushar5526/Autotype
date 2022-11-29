@@ -3,7 +3,7 @@ from dataclasses import dataclass
 import os
 import typer
 from typing import Optional
-from core import Autotype
+from .core import Autotype
 import time
 
 @dataclass
