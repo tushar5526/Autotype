@@ -15,18 +15,32 @@ A quick and small python script that helps you autotype on websites that have co
 <img src="./demo.gif?raw=true">
 
 # Pre-requisites
-`python3.x`   
-`pip` 
+`python3.9.x`   
+`pip`
 
-# Install the dependencies
+# Development Setup
+- Create a new virtual environment using `pipenv`
+```bash
+pip install pipenv --user
 
-`pip install -r requirements.txt`
+# create venv and install dependencies from Pipfile
+pipenv install
+```
+- Activate the environment
+```bash
+pipenv shell
 
-### Run it as CLI app
+# check if activated
+pip -V
+```
 
-Provide the path of the file to be autotyped and the delay time through teminal/shell.
+- Run it as CLI app
 
-`python3 command_line_script --path filePath --delay delay_before_typing`
+> Provide the path of the file to be autotyped and the delay time through teminal/shell.
+
+```bash
+python3 command_line_script --path filePath --delay delay_before_typing
+```
 
 
 ### Run the GUI if you are not familiar with CLI apps.
