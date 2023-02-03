@@ -71,11 +71,14 @@ class App(customtkinter.CTk):
         self.switch_1.grid(row=10, column=0, pady=10, padx=20, sticky="w")
 
         # ============ frame_right ============
-
         self.code = customtkinter.CTkTextbox(
-            master=self.frame_right, width=520, height=400
+            master=self.frame_right, width=520, height=400,
         )
+        
+        self.code.textbox=tk.Text(self.master,font=('Calibri',12))
         self.code.grid(row=8, column=0, columnspan=2, pady=20, padx=20, sticky="we")
+        
+    
 
         self.label_2 = customtkinter.CTkLabel(
             master=self.frame_right,
@@ -92,13 +95,13 @@ class App(customtkinter.CTk):
     def start_typing(self):
         delay = self.delay.get()
         code = self.code.textbox.get("1.0", tk.END)
-        if str(code).isspace() and delay != "":  # when code is not provided
-            Type(path=self.open_file(), delay=int(delay), code=None)
-            self.label.configure(text="Done Writing Script")
-        elif str(code).isspace() and delay == "":
-            Type(path=self.open_file(), delay=int(delay), code=None)
-            self.label.configure(text="Done Writing Script")
-        elif not str(code).isspace() and delay != "":  # when code is provided
+        # if str(code).isspace() and delay != "":  # when code is not provided
+        #     Type(path=self.open_file(), delay=int(delay), code=None)
+        #     self.label.configure(text="Done Writing Script")
+        # elif str(code).isspace() and delay == "":
+        #     Type(path=self.open_file(), delay=int(delay), code=None)
+        #     self.label.configure(text="Done Writing Script")
+        if not str(code).isspace() and delay != "":  # when code is provided
             Type(path=None, delay=int(delay), code=code)
             self.label.configure(text="Done Writing Script")
         else:
@@ -112,11 +115,10 @@ class App(customtkinter.CTk):
             customtkinter.set_appearance_mode("light")
 
     def on_closing(self, event=0):
-        self.destroy()
+        self.destroy
 
     def start(self):
         self.mainloop()
-
 
 if __name__ == "__main__":
     app = App()

@@ -33,4 +33,4 @@ def Type(path: str = None, delay: int = None, code: str = None):
         # It was observed that a small sleep in between each lines, makes Autotype perform better
         sleep(0.1)
         keyboard.tap(Key.enter)
-        keyboard.tap(Key.home)
+        # keyboard.tap(Key.home)
