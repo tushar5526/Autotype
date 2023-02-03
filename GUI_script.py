@@ -95,12 +95,12 @@ class App(customtkinter.CTk):
     def start_typing(self):
         delay = self.delay.get()
         code = self.code.textbox.get("1.0", tk.END)
-        # if str(code).isspace() and delay != "":  # when code is not provided
-        #     Type(path=self.open_file(), delay=int(delay), code=None)
-        #     self.label.configure(text="Done Writing Script")
-        # elif str(code).isspace() and delay == "":
-        #     Type(path=self.open_file(), delay=int(delay), code=None)
-        #     self.label.configure(text="Done Writing Script")
+        if str(code).isspace() and delay != "":  # when code is not provided
+            Type(path=self.open_file(), delay=int(delay), code=None)
+            self.label.configure(text="Done Writing Script")
+        elif str(code).isspace() and delay == "":
+            Type(path=self.open_file(), delay=int(delay), code=None)
+            self.label.configure(text="Done Writing Script")
         if not str(code).isspace() and delay != "":  # when code is provided
             Type(path=None, delay=int(delay), code=code)
             self.label.configure(text="Done Writing Script")
