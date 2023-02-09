@@ -1,12 +1,12 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "3973f462c66875bb3373b6b575b8ca8d02a6c3baac1b5da3aac86b8c7347de52"
+            "sha256": "d3e021aadf95244aa9b87801cf989855648ee39f667099f586059e792d9596b8"
         },
         "pipfile-spec": 6,
         "requires": {
-            "python_full_version": "3.10.9",
-            "python_version": "3.10"
+            "python_full_version": "3.9.0",
+            "python_version": "3.9"
         },
         "sources": [
             {
@@ -48,6 +48,13 @@
             ],
             "index": "pypi",
             "version": "==0.7.1"
+        },
+        "evdev": {
+            "hashes": [
+                "sha256:299db8628cc73b237fc1cc57d3c2948faa0756e2a58b6194b5bf81dc2081f1e3"
+            ],
+            "markers": "'linux' in sys_platform",
+            "version": "==1.6.1"
         },
         "importlib-metadata": {
             "hashes": [
