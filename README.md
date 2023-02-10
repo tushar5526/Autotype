@@ -77,6 +77,14 @@ code = """
 - After running the script click on the window to move your cursor wherever you want to auto-type.
 <hr>
 
+https://giphy.com/gifs/GnvUyXGGvvz0FMquth
+
+https://giphy.com/gifs/kEtITc9INUestYfi7F
+
+https://giphy.com/gifs/SsfDUI52ZLWrQYAMqN
+
+YT link - https://youtu.be/SftSe187Klc
+
 ## 💪 Thanks to all Wonderful Contributors
 
 Thanks a lot for spending your time helping AutoType grow.   
@@ -93,10 +101,4 @@ Don't forget to leave a star ⭐️
 
 
 
-https://giphy.com/gifs/GnvUyXGGvvz0FMquth
 
-https://giphy.com/gifs/kEtITc9INUestYfi7F
-
-https://giphy.com/gifs/SsfDUI52ZLWrQYAMqN
-
-YT link - https://youtu.be/SftSe187Klc
