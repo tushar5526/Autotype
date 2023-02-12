@@ -77,6 +77,9 @@ code = """
 - After running the script click on the window to move your cursor wherever you want to auto-type.
 <hr>
 
+
+![hippo](https://giphy.com/gifs/GnvUyXGGvvz0FMquth)
+
 https://giphy.com/gifs/GnvUyXGGvvz0FMquth
 
 https://giphy.com/gifs/kEtITc9INUestYfi7F
