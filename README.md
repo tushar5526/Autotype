@@ -80,9 +80,6 @@ code = """
 
 
 
-![me](https://github.com/Daisyliu6/Daisyliu6/blob/master/me.gif)
-
-
 https://giphy.com/gifs/GnvUyXGGvvz0FMquth
 
 https://giphy.com/gifs/kEtITc9INUestYfi7F
