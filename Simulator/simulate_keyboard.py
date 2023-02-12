@@ -1,4 +1,4 @@
-from pynput.keyboard import Key, Controller
+import pyautogui
 from time import sleep
 
 
@@ -27,10 +27,11 @@ def Type(path: str = None, delay: int = None, code: str = None):
             self.y = y
         """
 
-    keyboard = Controller()
+
+
     for line in code.split("\n"):
-        keyboard.type(line)
+        pyautogui.write(line)
         # It was observed that a small sleep in between each lines, makes Autotype perform better
         sleep(0.1)
-        keyboard.tap(Key.enter)
-        keyboard.tap(Key.home)
+        pyautogui.click("enter")
+        pyautogui.click("home")
