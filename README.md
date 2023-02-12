@@ -34,6 +34,7 @@ pipenv shell
 pip -V
 ```
 
+
 - Run it as CLI app
 
 > Provide the path of the file to be autotyped and the delay time through teminal/shell.
@@ -77,16 +78,10 @@ code = """
 - After running the script click on the window to move your cursor wherever you want to auto-type.
 <hr>
 
+![32](https://user-images.githubusercontent.com/108119109/218298259-39330c4c-8703-42f4-80f4-dd2a1c3fe807.gif)
 
 
-
-https://giphy.com/gifs/GnvUyXGGvvz0FMquth
-
-https://giphy.com/gifs/kEtITc9INUestYfi7F
-
-https://giphy.com/gifs/SsfDUI52ZLWrQYAMqN
-
-YT link - https://youtu.be/SftSe187Klc
+YT link 🔗 -  https://youtu.be/SftSe187Klc
 
 ## 💪 Thanks to all Wonderful Contributors
 
