@@ -82,6 +82,7 @@ code = """
 
 ![32](https://user-images.githubusercontent.com/108119109/218298259-39330c4c-8703-42f4-80f4-dd2a1c3fe807.gif)
 ![deucj](https://user-images.githubusercontent.com/108119109/218298371-49a38dfa-45f8-4360-a72d-3cbe723b437f.gif)
+![final-online-video-cuttercom](https://user-images.githubusercontent.com/108119109/218298400-ef5798ec-6f8b-4b05-9ba5-c60bf50fefcd.gif)
 
 
 YT link 🔗 -  https://youtu.be/SftSe187Klc
