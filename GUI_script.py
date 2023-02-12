@@ -8,7 +8,6 @@ customtkinter.set_appearance_mode("Dark")  # Modes: "System" (standard), "Dark",
 
 
 class App(customtkinter.CTk):
-
     WIDTH = 780
     HEIGHT = 520
 

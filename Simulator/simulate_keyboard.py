@@ -27,8 +27,6 @@ def Type(path: str = None, delay: int = None, code: str = None):
             self.y = y
         """
 
-
-
     for line in code.split("\n"):
         pyautogui.write(line)
         # It was observed that a small sleep in between each lines, makes Autotype perform better
