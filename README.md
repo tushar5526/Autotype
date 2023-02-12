@@ -61,6 +61,8 @@ python3 command_line_script --path filePath --delay delay_before_typing
 ### Run it as follows if you are not familiar with CLI apps.
 Put the text inside `code` in `Simulator/simulate_keyboard.py` as follows
 
+
+
 ```
 Line 13
 code = """
@@ -79,6 +81,7 @@ code = """
 <hr>
 
 ![32](https://user-images.githubusercontent.com/108119109/218298259-39330c4c-8703-42f4-80f4-dd2a1c3fe807.gif)
+![deucj](https://user-images.githubusercontent.com/108119109/218298371-49a38dfa-45f8-4360-a72d-3cbe723b437f.gif)
 
 
 YT link 🔗 -  https://youtu.be/SftSe187Klc
