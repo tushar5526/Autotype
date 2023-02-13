@@ -41,7 +41,16 @@ pip -V
 ```bash
 python3 command_line_script --path filePath --delay delay_before_typing
 ```
+- Create a new virtual environment using `venv`
+```bash
+python3 -m venv venv
 
+# Activate the new venv
+source venv/bin/activate
+
+Install the requirements.txt files.
+pip3 install -r requirements.txt
+```
 
 ### Run the GUI if you are not familiar with CLI apps.
 
