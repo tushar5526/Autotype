@@ -9,7 +9,6 @@ customtkinter.set_appearance_mode("Dark")  # Modes: "System" (standard), "Dark",
 
 
 class App(customtkinter.CTk):
-
     WIDTH = 780
     HEIGHT = 520
 
@@ -41,10 +40,10 @@ class App(customtkinter.CTk):
         self.frame_left.grid_rowconfigure(
             0, minsize=10
         )  # empty row with minsize as spacing
-        self.frame_left.grid_rowconfigure(2, minsize=10)  # empty row with minsize as spacing
         self.frame_left.grid_rowconfigure(
-            5, weight=1
-        )  # empty row as spacing
+            2, minsize=10
+        )  # empty row with minsize as spacing
+        self.frame_left.grid_rowconfigure(5, weight=1)  # empty row as spacing
         self.frame_left.grid_rowconfigure(
             8, minsize=20
         )  # empty row with minsize as spacing
@@ -99,7 +98,6 @@ class App(customtkinter.CTk):
         self.label_2.grid(row=8, column=0, columnspan=2, pady=20, padx=20, sticky="we")
         self.label_2.place(relx=0.38, rely=0.92)
 
-
     def open_file(self):
         filePath = filedialog.askopenfile()
         return filePath.name
@@ -111,16 +109,40 @@ class App(customtkinter.CTk):
         line_delay = float(self.line_delay.get())
         code = self.code.textbox.get("1.0", tk.END)
         if not code.strip() and delay:
-            Type(path=self.open_file(), delay=int(delay), code=None, key_delay=key_delay, line_delay=line_delay)
+            Type(
+                path=self.open_file(),
+                delay=int(delay),
+                code=None,
+                key_delay=key_delay,
+                line_delay=line_delay,
+            )
             self.label.configure(text="Done Writing Script")
         elif not code.strip() and not delay:
-            Type(path=self.open_file(), delay=3, code=None, key_delay=key_delay, line_delay=line_delay)
+            Type(
+                path=self.open_file(),
+                delay=3,
+                code=None,
+                key_delay=key_delay,
+                line_delay=line_delay,
+            )
             self.label.configure(text="Done Writing Script")
         elif code.strip() and delay:
-            Type(path=None, delay=int(delay), code=code, key_delay=key_delay, line_delay=line_delay)
+            Type(
+                path=None,
+                delay=int(delay),
+                code=code,
+                key_delay=key_delay,
+                line_delay=line_delay,
+            )
             self.label.configure(text="Done Writing Script")
         else:
-            Type(path=None, delay=3, code=code, key_delay=key_delay, line_delay=line_delay)
+            Type(
+                path=None,
+                delay=3,
+                code=code,
+                key_delay=key_delay,
+                line_delay=line_delay,
+            )
             self.label.configure(text="Done Writing Script")
 
     def change_mode(self):
