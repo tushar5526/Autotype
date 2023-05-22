@@ -4,6 +4,7 @@ import customtkinter
 from tkinter import filedialog
 import tkinter
 
+
 customtkinter.set_appearance_mode("Dark")  # Modes: "System" (standard), "Dark", "Light"
 
 
@@ -40,7 +41,10 @@ class App(customtkinter.CTk):
         self.frame_left.grid_rowconfigure(
             0, minsize=10
         )  # empty row with minsize as spacing
-        self.frame_left.grid_rowconfigure(5, weight=1)  # empty row as spacing
+        self.frame_left.grid_rowconfigure(2, minsize=10)  # empty row with minsize as spacing
+        self.frame_left.grid_rowconfigure(
+            5, weight=1
+        )  # empty row as spacing
         self.frame_left.grid_rowconfigure(
             8, minsize=20
         )  # empty row with minsize as spacing
@@ -51,7 +55,17 @@ class App(customtkinter.CTk):
         self.delay = customtkinter.CTkEntry(
             master=self.frame_left, width=140, placeholder_text="Enter time delay"
         )
-        self.delay.grid(row=1, column=0, pady=20, padx=20)
+        self.delay.grid(row=1, column=0, pady=10, padx=20)
+
+        self.key_delay = customtkinter.CTkEntry(
+            master=self.frame_left, width=140, placeholder_text="Character delay time"
+        )
+        self.key_delay.grid(row=3, column=0, pady=10, padx=20)
+
+        self.line_delay = customtkinter.CTkEntry(
+            master=self.frame_left, width=140, placeholder_text="Next Line delay"
+        )
+        self.line_delay.grid(row=5, column=0, pady=10, padx=20)
 
         self.button_2 = customtkinter.CTkButton(
             master=self.frame_left,
@@ -60,7 +74,7 @@ class App(customtkinter.CTk):
             command=self.start_typing,
             hover=True,
         )
-        self.button_2.grid(row=3, column=0, pady=10, padx=20)
+        self.button_2.grid(row=6, column=0, pady=10, padx=20)
 
         self.label = customtkinter.CTkLabel(master=self.frame_left, text="")
         self.label.place(relx=0.5, rely=0.3, anchor=tkinter.CENTER)
@@ -85,24 +99,28 @@ class App(customtkinter.CTk):
         self.label_2.grid(row=8, column=0, columnspan=2, pady=20, padx=20, sticky="we")
         self.label_2.place(relx=0.38, rely=0.92)
 
+
     def open_file(self):
         filePath = filedialog.askopenfile()
         return filePath.name
 
     def start_typing(self):
+        # Get the delay time, key delay time, line delay time, and code from the GUI inputs
         delay = self.delay.get()
+        key_delay = float(self.key_delay.get())
+        line_delay = float(self.line_delay.get())
         code = self.code.textbox.get("1.0", tk.END)
-        if str(code).isspace() and delay != "":  # when code is not provided
-            Type(path=self.open_file(), delay=int(delay), code=None)
+        if not code.strip() and delay:
+            Type(path=self.open_file(), delay=int(delay), code=None, key_delay=key_delay, line_delay=line_delay)
             self.label.configure(text="Done Writing Script")
-        elif str(code).isspace() and delay == "":
-            Type(path=self.open_file(), delay=int(delay), code=None)
+        elif not code.strip() and not delay:
+            Type(path=self.open_file(), delay=3, code=None, key_delay=key_delay, line_delay=line_delay)
             self.label.configure(text="Done Writing Script")
-        elif not str(code).isspace() and delay != "":  # when code is provided
-            Type(path=None, delay=int(delay), code=code)
+        elif code.strip() and delay:
+            Type(path=None, delay=int(delay), code=code, key_delay=key_delay, line_delay=line_delay)
             self.label.configure(text="Done Writing Script")
         else:
-            Type(path=None, delay=int(delay), code=code)
+            Type(path=None, delay=3, code=code, key_delay=key_delay, line_delay=line_delay)
             self.label.configure(text="Done Writing Script")
 
     def change_mode(self):
