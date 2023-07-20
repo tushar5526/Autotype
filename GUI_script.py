@@ -107,9 +107,22 @@ class App(customtkinter.CTk):
     def start_typing(self):
         # Get the delay time, key delay time, line delay time, and code from the GUI inputs
         delay = self.delay.get()
-        key_delay = float(self.key_delay.get())
-        line_delay = float(self.line_delay.get())
+        key_delay = self.key_delay.get()
+        line_delay = self.line_delay.get()
         code = self.code.textbox.get("1.0", tk.END)
+
+        # Check if key_delay and line_delay are provided
+        if not key_delay:
+            key_delay = 0  # Set a default value (e.g., 0 seconds) if not provided
+        else:
+            key_delay = float(key_delay)
+
+        if not line_delay:
+            line_delay = 0  # Set a default value (e.g., 0 seconds) if not provided
+        else:
+            line_delay = float(line_delay)
+
+        # Continue with the logic based on code and delay as before
         if not code.strip() and delay:
             Type(path=self.open_file(), delay=int(delay), code=None, key_delay=key_delay, line_delay=line_delay)
             self.label.configure(text="Done Writing Script")
