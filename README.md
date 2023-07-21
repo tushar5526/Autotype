@@ -7,15 +7,15 @@ A quick and small python script that helps you autotype on websites that have co
 [![GitHub forks](https://img.shields.io/github/forks/tushar5526/Autotype)](https://github.com/tushar5526/Autotype/network)
 [![GitHub stars](https://img.shields.io/github/stars/tushar5526/Autotype)](https://github.com/tushar5526/Autotype/stargazers)
 [![GitHub license](https://img.shields.io/github/license/tushar5526/Autotype)](https://github.com/tushar5526/Autotype/blob/main/LICENSE)
-[![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) ![contributions welcome](https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=0059b3&style=flat-square) ![GitHub contributors](https://img.shields.io/github/contributors-anon/tushar5526/Autotype) 
+[![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) ![contributions welcome](https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=0059b3&style=flat-square) ![GitHub contributors](https://img.shields.io/github/contributors-anon/tushar5526/Autotype)
 <br>
 
 **Works for windows, mac and linux**
 
-<img src="./demo.gif?raw=true">
+<img src="https://i.imgur.com/pUfYwD0.gif">
 
 # Pre-requisites
-`python3.9.x`   
+`python3.9.x`
 `pip`
 
 # Development Setup
@@ -32,6 +32,25 @@ pipenv shell
 
 # check if activated
 pip -V
+
+pip install -r requirements.txt
+```
+
+- For Linux
+```bash
+
+For Ubuntu or other distros with Apt:
+
+sudo apt-get install python3-tk
+
+For Fedora:
+
+sudo dnf install python3-tkinter
+
+For Arch Based
+
+sudo pacman -S tk
+
 ```
 
 - Run it as CLI app
@@ -46,16 +65,16 @@ python3 command_line_script --path filePath --delay delay_before_typing
 ### Run the GUI if you are not familiar with CLI apps.
 
 - Run the script `python3 GUI_script.py`
-<img src="demo_image/demo_script_gui.png">
+<img src="https://i.imgur.com/QhDjIqe.jpeg">
 
 - You can simply type your code in the textbox , enter the time delay and click the `Start Typing` button.The script will then type your code for you.
-![](https://github.com/RyanWalker277/Autotype/blob/main/demo_image/type_code.gif)
+<img src="https://i.imgur.com/3ysBzIT.gif">
 
 - If your code is in a file , then leave the textbox blank , enter the time delay and click `Start Typing` button.A file exploror prompt will open asking you to select the file.Simply select your file and Done! Autotype will type your code for you.
-![](https://github.com/RyanWalker277/Autotype/blob/main/demo_image/open_file.gif)
+<img src="https://imgur.com/SOauxRx.gif">
 
 - There are two themes in the GUI Script: Dark and Light. By clicking the toggle in the bottom left corner of the window, you can switch between the two.
-![](https://github.com/RyanWalker277/Autotype/blob/main/demo_image/themes.gif)
+<img src="https://imgur.com/NjLfWcL.gif)">
 
 ### Run it as follows if you are not familiar with CLI apps.
 Put the text inside `code` in `Simulator/simulate_keyboard.py` as follows
@@ -79,14 +98,14 @@ code = """
 
 ## 💪 Thanks to all Wonderful Contributors
 
-Thanks a lot for spending your time helping AutoType grow.   
+Thanks a lot for spending your time helping AutoType grow.
 Thanks a lot! Keep rocking 🍻
 
 [![Contributors](https://contrib.rocks/image?repo=tushar5526/Autotype)](https://github.com/tushar5526/Autotype/graphs/contributors)
 
 ## 🙏 Support++
 
-This project needs your shiny star ⭐.   
+This project needs your shiny star ⭐.
 Don't forget to leave a star ⭐️
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)  [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
