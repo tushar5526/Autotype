@@ -2,11 +2,13 @@
 import os
 import typer
 from typing import Optional
-from simulate_keyboard import Type
+from Autotype.simulate_keyboard import Type
 import time
 
+app = typer.Typer()
 
-def autotype_cli(
+@app.command()
+def main(
     path: Optional[str] = typer.Option(
         default="",
         help=typer.style("the path to the file 🗂", fg=typer.colors.MAGENTA),
@@ -66,4 +68,4 @@ def autotype_cli(
 
 
 if __name__ == "__main__":
-    typer.run(autotype_cli)
+    app()

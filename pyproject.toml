@@ -14,10 +14,10 @@ classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
 ]
-keywords = ["bitssh", "sshmanager", "commandline"]
+keywords = ["Autotype", "simulator", "commandline"]
 dependencies = [
-    pynput,
-    typer
+    "pynput",
+    "typer",
 ]
 requires-python = ">=3.9"
 
@@ -25,11 +25,11 @@ requires-python = ">=3.9"
 dev = ["black", "bumpver", "isort", "pip-tools", "pytest"]
 
 [project.urls]
-Homepage = "https://github.com/Mr-Sunglasses/bitssh"
-Docs = "https://github.com/Mr-Sunglasses/bitssh/blob/master/docs/docs.md"
+Homepage = "https://github.com/tushar5526/Autotype"
+Docs = "https://github.com/tushar5526/Autotype/blob/main/README.md"
 
 [project.scripts]
-Autotype = "Autotype.__main__:main"
+Autotype = "Autotype.__main__:app"
 
 [tool.bumpver]
 current_version = "1.0.0"
@@ -41,4 +41,4 @@ push            = false
 
 [tool.bumpver.file_patterns]
 "pyproject.toml" = ['current_version = "{version}"', 'version = "{version}"']
-"src/bitssh/__init__.py" = ["{version}"]
+"src/Autotype/__init__.py" = ["{version}"]
