@@ -2,7 +2,7 @@
 import os
 import typer
 from typing import Optional
-from Simulator import Type
+from simulate_keyboard import Type
 import time
 
 

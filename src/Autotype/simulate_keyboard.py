@@ -1,6 +1,7 @@
 from pynput.keyboard import Key, Controller
 from time import sleep
 
+
 def Type(path: str = None, delay: int = None, code: str = None, key_delay: float = 0.1, line_delay: float = 0.1):
     # If the Argument is negative
     if not delay:
@@ -12,7 +13,7 @@ def Type(path: str = None, delay: int = None, code: str = None, key_delay: float
 
     # wait for few seconds before typing
     sleep(delay)
-    
+
     # manually enter your code here or provide a path
     if path:
         with open(path, "r") as file:
