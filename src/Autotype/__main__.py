@@ -7,6 +7,7 @@ import time
 
 app = typer.Typer()
 
+
 @app.command()
 def main(
     path: Optional[str] = typer.Option(
@@ -24,6 +25,22 @@ def main(
         show_default=3,
         prompt=True,
     ),
+    key_delay: Optional[int] = typer.Option(
+        default=0.1,
+        help=typer.style(
+            "Delay ⏳ in Seconds Between Each keystroke 🎹", fg=typer.colors.MAGENTA
+        ),
+        show_default=0.1,
+        prompt=True,
+    ),
+    line_delay: Optional[int] = typer.Option(
+        default=0.1,
+        help=typer.style(
+            "Delay ⏳ in Seconds Between Each line 📈", fg=typer.colors.MAGENTA
+        ),
+        show_default=0.1,
+        prompt=True,
+    ),
 ):
     """
     A quick and small python script that helps you autotype on websites that have copy paste disabled like Moodle, HackerEarth contests etc as it is difficult to efficiently debug your code on an online compiler.
@@ -31,6 +48,10 @@ def main(
     --path: the path to the file.
 
     --delay: time delay before typing.
+
+    --key_delay: key_delay seconds between each keystroke
+
+    --line_delay: line_delay seconds between each line
 
     return: Prints the File Given.
     """
@@ -57,7 +78,7 @@ def main(
             for value in progress:
                 time.sleep(0.01)
                 total += 1
-        Type(path, delay)
+        Type(path=path, delay=delay, key_delay=key_delay, line_delay=line_delay)
         successfull_file_path = typer.style(
             f"{path} File", fg=typer.colors.BRIGHT_GREEN
         )
