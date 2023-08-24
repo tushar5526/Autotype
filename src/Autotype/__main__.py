@@ -40,7 +40,6 @@ def type(
             "Delay ⏳ in Seconds Between Each keystroke 🎹", fg=typer.colors.MAGENTA
         ),
         show_default=0.1,
-        prompt=True,
     ),
     line_delay: Optional[int] = typer.Option(
         default=0.1,
@@ -48,7 +47,6 @@ def type(
             "Delay ⏳ in Seconds Between Each line 📈", fg=typer.colors.MAGENTA
         ),
         show_default=0.1,
-        prompt=True,
     ),
 ):
     """
