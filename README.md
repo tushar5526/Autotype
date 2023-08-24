@@ -1,4 +1,5 @@
 # Autotype 🖊
+
 <center>
     <img src="artwork/AutotypeLogo.png" width="350" height="350">
 </center>
