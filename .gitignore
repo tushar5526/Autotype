@@ -8,8 +8,9 @@ __pycache__/
 
 # Pycharm
 .idea
-autovenv
-testvenv
+
+# Docs
+docs/book
 
 # Distribution / packaging
 .Python

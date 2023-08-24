@@ -3,13 +3,22 @@ import os
 import typer
 from typing import Optional
 from Autotype.simulate_keyboard import Type
+from Autotype import __version__
 import time
 
 app = typer.Typer()
 
 
 @app.command()
-def main(
+def version():
+    """
+    Check the Version of Autotype 🖊️
+    """
+    print(f"Autotype {__version__} 🖊️")
+
+
+@app.command()
+def type(
     path: Optional[str] = typer.Option(
         default="",
         help=typer.style("the path to the file 🗂", fg=typer.colors.MAGENTA),
