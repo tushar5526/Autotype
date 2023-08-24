@@ -1,8 +1,8 @@
 # Autotype 🖊
 
-<center>
+<p align="center">
     <img src="artwork/AutotypeLogo.png" width="350" height="350">
-</center>
+</p>
 
 
 A quick and small python script that helps you autotype on websites that have copy paste disabled like Moodle, HackerEarth contests etc as it is difficult to efficiently debug your code on an online compiler.
