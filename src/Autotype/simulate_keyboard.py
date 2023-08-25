@@ -1,5 +1,6 @@
 from pynput.keyboard import Key, Controller
 from time import sleep
+from Autotype.utils import progress_bar
 
 
 def Type(
@@ -17,7 +18,7 @@ def Type(
         line_delay = abs(line_delay)
 
     # wait for few seconds before typing
-    sleep(delay)
+    progress_bar(delay)
 
     # manually enter your code here or provide a path
     if path:

@@ -75,16 +75,6 @@ def type(
         typer.echo(f"{file_path + ' ' + error_message} ")
         raise typer.Exit(code=0)
     else:
-        total = 0
-        with typer.progressbar(
-            range(100),
-            label=typer.style(
-                "Writing File in Progress -> ", fg=typer.colors.GREEN, bold=True
-            ),
-        ) as progress:
-            for value in progress:
-                time.sleep(0.01)
-                total += 1
         Type(path=path, delay=delay, key_delay=key_delay, line_delay=line_delay)
         successfull_file_path = typer.style(
             f"{path} File", fg=typer.colors.BRIGHT_GREEN
