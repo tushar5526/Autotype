@@ -18,6 +18,8 @@ keywords = ["Autotype", "simulator", "commandline"]
 dependencies = [
     "pynput",
     "typer",
+    "progressbar2",
+    "colorama",
 ]
 requires-python = ">=3.9"
 

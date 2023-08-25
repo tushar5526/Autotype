@@ -1,21 +1,27 @@
 import time
+import progressbar
+from colorama import Fore, Style, init
+
+init(autoreset=True)  # Initialize colorama
 
 
 def progress_bar(total_time):
-    start_time = time.time()
-    end_time = start_time + total_time
-    bar_length = 40
+    widgets = [
+        "Progress: ",
+        progressbar.Percentage(),
+        " ",
+        Fore.GREEN,
+        progressbar.Bar(marker="█"),
+        " ",
+        progressbar.Timer(),
+        " ",
+        progressbar.ETA(),
+        Style.RESET_ALL,
+    ]
 
-    while time.time() < end_time:
-        elapsed_time = time.time() - start_time
-        progress = elapsed_time / total_time
-        progress_bar = int(bar_length * progress)
-        remaining_bar = bar_length - progress_bar
+    with progressbar.ProgressBar(widgets=widgets, max_value=total_time) as bar:
+        for i in range(total_time):
+            time.sleep(1)
+            bar.update(i + 1)
 
-        print(
-            f"[{'=' * progress_bar}{' ' * remaining_bar}] {int(progress * 100)}%",
-            end="\r",
-        )
-        time.sleep(0.1)  # Adjust this value for smoother or faster updates
-
-    print("\nProgress complete!")
+    print(Fore.CYAN + "Progress complete!" + Style.RESET_ALL)
