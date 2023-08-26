@@ -1,0 +1,53 @@
+[build-system]
+requires      = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Autotype"
+version = "1.0.0"
+description = "A quick and small python script that helps you autotype on websites."
+readme = "README.md"
+authors = [{ name = "Tushar Gupta", email = "codingid6@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["Autotype", "simulator", "commandline"]
+dependencies = [
+    "pynput",
+    "typer",
+    "progressbar2",
+    "colorama",
+]
+requires-python = ">=3.9"
+
+[project.optional-dependencies]
+dev = ["black", "bumpver", "isort", "pip-tools", "pytest", "ruff"]
+
+[tool.ruff]
+line-length = 160
+exclude = ["src/*", ".git", "docs"]
+
+[tool.ruff.mccabe]
+max-complexity = 10
+
+[project.urls]
+Homepage = "https://github.com/tushar5526/Autotype"
+Docs = "https://github.com/tushar5526/Autotype/blob/main/README.md"
+
+[project.scripts]
+Autotype = "Autotype.__main__:app"
+
+[tool.bumpver]
+current_version = "1.0.0"
+version_pattern = "MAJOR.MINOR.PATCH"
+commit_message  = "Bump version {old_version} -> {new_version}"
+commit          = true
+tag             = true
+push            = false
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = ['current_version = "{version}"', 'version = "{version}"']
+"src/Autotype/__init__.py" = ["{version}"]

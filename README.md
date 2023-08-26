@@ -1,5 +1,10 @@
 # Autotype 🖊
 
+<p align="center">
+    <img src="artwork/AutotypeLogo.png" width="350" height="350">
+</p>
+
+
 A quick and small python script that helps you autotype on websites that have copy paste disabled like Moodle, HackerEarth contests etc as it is difficult to efficiently debug your code on an online compiler.
 
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/codingid6)
@@ -15,86 +20,78 @@ A quick and small python script that helps you autotype on websites that have co
 <img src="https://i.imgur.com/pUfYwD0.gif">
 
 # Pre-requisites
+<hr>
+
 `python3.9.x`
 `pip`
 
-# Development Setup
-- Create a new virtual environment using `pipenv`
-```bash
-pip install pipenv --user
-
-# create venv and install dependencies from Pipfile
-pipenv install
-```
-- Activate the environment
-```bash
-pipenv shell
-
-# check if activated
-pip -V
-
-pip install -r requirements.txt
-```
-
-- For Linux
-```bash
-
-For Ubuntu or other distros with Apt:
-
-sudo apt-get install python3-tk
-
-For Fedora:
-
-sudo dnf install python3-tkinter
-
-For Arch Based
-
-sudo pacman -S tk
-
-```
-
-- Run it as CLI app
-
-> Provide the path of the file to be autotyped and the delay time through teminal/shell.
-
-```bash
-python3 command_line_script --path filePath --delay delay_before_typing
-```
-
-
-### Run the GUI if you are not familiar with CLI apps.
-
-- Run the script `python3 GUI_script.py`
-<img src="https://i.imgur.com/QhDjIqe.jpeg">
-
-- You can simply type your code in the textbox , enter the time delay and click the `Start Typing` button.The script will then type your code for you.
-<img src="https://i.imgur.com/3ysBzIT.gif">
-
-- If your code is in a file , then leave the textbox blank , enter the time delay and click `Start Typing` button.A file exploror prompt will open asking you to select the file.Simply select your file and Done! Autotype will type your code for you.
-<img src="https://imgur.com/SOauxRx.gif">
-
-- There are two themes in the GUI Script: Dark and Light. By clicking the toggle in the bottom left corner of the window, you can switch between the two.
-<img src="https://imgur.com/NjLfWcL.gif)">
-
-### Run it as follows if you are not familiar with CLI apps.
-Put the text inside `code` in `Simulator/simulate_keyboard.py` as follows
-
-```
-Line 13
-code = """
-    #include<bits/stdc++.h>
-    {
-        .
-        .
-        .
-    }
-"""
-# Make sure to use triple quotes as it will preserve the code format.
-```
-- Run the script `python3 Simulator/simulate_keyboard.py`
-- The script will start typing after 3s (wait or delay time can be tuned)
-- After running the script click on the window to move your cursor wherever you want to auto-type.
+# Installation
 <hr>
+
+Install Autotype with pip
+```bash
+  pip3 install Autotype
+
+  Autotype --help
+```
+
+Install from source
+
+```bash
+git clone https://github.com/tushar5526/Autotype
+
+cd Autotype
+
+python3 -m pip install .
+
+# To check if Autotype is correctly installed
+Autotype version
+
+```
+
+# Usage
+<hr>
+
+For Help and Listing all the Features of Autotype
+```bash
+
+Autotype type --help
+
+```
+
+Simulation of a Code file and Writing it.
+```bash
+
+Autotype type --path <path of the file to write> --delay <delay in seconds befor writing>
+
+```
+
+<b> <i> 🗒️ Note: </i>  --path [Required] --delay[Optional [ default= 3seconds ] ]️</b>
+
+<hr>
+
+# Dev-Setup
+```bash
+git clone https://github.com/tushar5526/Autotype
+
+python3 -m venv venv
+
+source venv/bin/activate
+
+pip3 install -r requirements-dev.txt
+
+pre-commit
+
+pip3 install .
+
+```
+
+# About Other Branches
+
+[main](https://github.com/tushar5526/Autotype/tree/stable) is for Stable user's it is the main repo which is Uploded to PyPi
+
+[Alpha](https://github.com/tushar5526/Autotype/tree/alpha) is for Alpha tester's with cutting edge features and some breaking changes, Can we broken while Installation
+
 
 ## 💪 Thanks to all Wonderful Contributors
 
@@ -109,6 +106,3 @@ This project needs your shiny star ⭐.
 Don't forget to leave a star ⭐️
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)  [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
-
-
-
