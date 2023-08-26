@@ -2,11 +2,23 @@
 import os
 import typer
 from typing import Optional
-from Simulator import Type
+from Autotype.simulate_keyboard import Type
+from Autotype import __version__
 import time
 
+app = typer.Typer()
 
-def autotype_cli(
+
+@app.command()
+def version():
+    """
+    Check the Version of Autotype 🖊️
+    """
+    print(f"Autotype {__version__} 🖊️")
+
+
+@app.command()
+def type(
     path: Optional[str] = typer.Option(
         default="",
         help=typer.style("the path to the file 🗂", fg=typer.colors.MAGENTA),
@@ -22,6 +34,20 @@ def autotype_cli(
         show_default=3,
         prompt=True,
     ),
+    key_delay: Optional[int] = typer.Option(
+        default=0.1,
+        help=typer.style(
+            "Delay ⏳ in Seconds Between Each keystroke 🎹", fg=typer.colors.MAGENTA
+        ),
+        show_default=0.1,
+    ),
+    line_delay: Optional[int] = typer.Option(
+        default=0.1,
+        help=typer.style(
+            "Delay ⏳ in Seconds Between Each line 📈", fg=typer.colors.MAGENTA
+        ),
+        show_default=0.1,
+    ),
 ):
     """
     A quick and small python script that helps you autotype on websites that have copy paste disabled like Moodle, HackerEarth contests etc as it is difficult to efficiently debug your code on an online compiler.
@@ -29,6 +55,10 @@ def autotype_cli(
     --path: the path to the file.
 
     --delay: time delay before typing.
+
+    --key_delay: key_delay seconds between each keystroke
+
+    --line_delay: line_delay seconds between each line
 
     return: Prints the File Given.
     """
@@ -45,17 +75,7 @@ def autotype_cli(
         typer.echo(f"{file_path + ' ' + error_message} ")
         raise typer.Exit(code=0)
     else:
-        total = 0
-        with typer.progressbar(
-            range(100),
-            label=typer.style(
-                "Writing File in Progress -> ", fg=typer.colors.GREEN, bold=True
-            ),
-        ) as progress:
-            for value in progress:
-                time.sleep(0.01)
-                total += 1
-        Type(path, delay)
+        Type(path=path, delay=delay, key_delay=key_delay, line_delay=line_delay)
         successfull_file_path = typer.style(
             f"{path} File", fg=typer.colors.BRIGHT_GREEN
         )
@@ -66,4 +86,4 @@ def autotype_cli(
 
 
 if __name__ == "__main__":
-    typer.run(autotype_cli)
+    app()
