@@ -88,7 +88,7 @@ pip3 install .
 
 # About Other Branches
 
-[Stable](https://github.com/tushar5526/Autotype/tree/stable) is for Stable user's it is the main repo which is Uploded to PyPi
+[main](https://github.com/tushar5526/Autotype/tree/stable) is for Stable user's it is the main repo which is Uploded to PyPi
 
 [Alpha](https://github.com/tushar5526/Autotype/tree/alpha) is for Alpha tester's with cutting edge features and some breaking changes, Can we broken while Installation
 
