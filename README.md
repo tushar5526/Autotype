@@ -70,6 +70,28 @@ Autotype type --path <path of the file to write> --delay <delay in seconds befor
 
 <hr>
 
+# Dev-Setup
+```bash
+git clone https://github.com/tushar5526/Autotype
+
+python3 -m venv venv
+
+source venv/bin/activate
+
+pip3 install -r requirements-dev.txt
+
+pre-commit
+
+pip3 install .
+
+```
+
+# About Other Branches
+
+[Stable](https://github.com/tushar5526/Autotype/tree/stable) is for Stable user's it is the main repo which is Uploded to PyPi
+
+[Alpha](https://github.com/tushar5526/Autotype/tree/alpha) is for Alpha tester's with cutting edge features and some breaking changes, Can we broken while Installation
+
 
 ## 💪 Thanks to all Wonderful Contributors
 
